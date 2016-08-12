@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/stock">
+    
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginBottom="5dp">
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:text="商品名称："/>
+        <EditText
+            android:id="@+id/add_shop_in_stock_name"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:hint="请输入商品名称"/>
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="20dp"
+		    android:text="供 应 商："/>
+        <EditText
+            android:id="@+id/add_shop_in_stock_company"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:hint="请输入供应商名称"/>
+    </LinearLayout>
+    
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginBottom="5dp"
+	    android:layout_gravity="center">
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:text="商品数量："/>
+        <EditText
+            android:id="@+id/add_shop_in_stock_number"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:numeric="integer"
+		    android:hint="请输入商品数量"/>
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="20dp"
+		    android:text="计量单位： "/>
+        <EditText
+            android:id="@+id/add_shop_in_stock_danwei"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:hint="请输入计量单位    "/>
+    </LinearLayout>
+    
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginBottom="5dp"
+	    android:layout_gravity="center">
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:text="联 系 人： "/>
+        <EditText
+            android:id="@+id/add_shop_in_stock_people"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:hint="请输入联系人    "/>
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="20dp"
+		    android:text="联系电话： "/>
+        <EditText
+            android:id="@+id/add_shop_in_stock_phone"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:hint="请输入联系电话    "/>
+    </LinearLayout>
+    
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginBottom="5dp"
+	    android:layout_gravity="center">
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:text="入库单价："/>
+        <EditText
+            android:id="@+id/add_shop_in_stock_price"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:hint="请输入入库价格"/>
+        <Button
+            android:id="@+id/add_shop_in_stock_date"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="20dp"
+		    android:hint="  点 击 设 置 入 库 日 期  "/>
+    </LinearLayout>
+    
+    <LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginBottom="5dp"
+	    android:layout_gravity="center">
+        <Button
+            android:id="@+id/add_shop_in_stock_save"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginRight="30dp"
+		    android:hint=" 保 存 "/>
+        <Button
+            android:id="@+id/add_shop_in_stock_back"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="30dp"
+		    android:hint=" 返 回 "/>
+    </LinearLayout>
+
+</LinearLayout>

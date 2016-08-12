@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/user" >
+    
+    <Button
+        android:id="@+id/user_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    	android:layout_gravity="center"
+    	android:layout_marginTop="70dp"
+    	android:layout_marginBottom="10dp"
+        android:text="修改用户信息" />
+    <LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"
+	    android:orientation="horizontal">
+        <Button
+            android:id="@+id/user_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="删除用户信息"
+            android:visibility="invisible" />
+        <Button
+            android:id="@+id/user_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="修改用户密码"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginBottom="5dp">
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:text="供应商名称："/>
+        <EditText
+            android:id="@+id/add_company_information_name"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:hint="请输入供应商名称"/>
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="20dp"
+		    android:text="城市："/>
+        <EditText
+            android:id="@+id/add_company_information_city"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:hint="请输入城市"/>
+    </LinearLayout>
+    
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginBottom="5dp"
+	    android:layout_gravity="center">
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:text="联系地址：  "/>
+        <EditText
+            android:id="@+id/add_company_information_address"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:hint="请输入联系地址 "/>
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="20dp"
+		    android:text="传真："/>
+        <EditText
+            android:id="@+id/add_company_information_chuangzhen"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:hint="请输入传真    "/>
+    </LinearLayout>
+    
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginBottom="5dp"
+	    android:layout_gravity="center">
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:text="联系电话：  "/>
+        <EditText
+            android:id="@+id/add_company_information_phone"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:hint="请输入联系电话 "/>
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="20dp"
+		    android:numeric="integer"
+		    android:text="邮编："/>
+        <EditText
+            android:id="@+id/add_company_information_youbian"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:hint="请输入邮编"/>
+    </LinearLayout>
+    
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginBottom="5dp"
+	    android:layout_gravity="center">
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:text="可供应商品："/>
+        <EditText
+            android:id="@+id/add_company_information_shop"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:hint="请输入商品名称 "/>
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="20dp"
+		    android:text="公司："/>
+        <EditText
+            android:id="@+id/add_company_information_company"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:hint="请输入公司"/>
+    </LinearLayout>
+    
+    <LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginBottom="5dp">
+        <Button
+            android:id="@+id/add_company_information_save"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="120dp"
+		    android:layout_marginRight="30dp"
+		    android:hint=" 保 存 "/>
+        <Button
+            android:id="@+id/add_company_information_back"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="30dp"
+		    android:hint=" 返 回 "/>
+    </LinearLayout>
+    
+</LinearLayout>

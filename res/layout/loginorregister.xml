@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/login_picture" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center" >
+        
+        <TableLayout 
+            android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center" >
+		    <TableRow>
+	    	    <TextView
+	    	        android:layout_width="match_parent"
+	    	        android:layout_height="200px" />
+	    	</TableRow>
+	        <TableRow>
+		        <TextView
+		            android:text="账号："
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textSize="40px"/>
+		        <EditText
+		            android:id="@+id/acount"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textSize="24px"
+		            android:minWidth="300px"
+		            android:maxWidth="300px"
+		            android:singleLine="true"/>
+	    	</TableRow>
+	    	<TableRow>
+		        <TextView
+		            android:text="密码："
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textSize="40px"/>
+		        <EditText
+		            android:id="@+id/password"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textSize="24px"
+		            android:minWidth="300px"
+		            android:maxWidth="300px" />
+	    	</TableRow>
+	    	
+	    	<TableRow>
+	    	    <CheckBox
+	    	         android:id="@+id/password_see" />
+	    	    <TextView
+	    	        android:text="设置密码可见"/>
+	    	</TableRow>
+	    	<TableRow>
+	    	    <CheckBox
+	    	         android:id="@+id/password_save" />
+	    	    <TextView
+	    	        android:text="设置密码保存"/>
+	    	</TableRow>
+	    	
+	    	<TableRow>
+	    	    <TextView
+	    	        android:layout_width="match_parent"
+	    	        android:layout_height="30px" />
+	    	</TableRow>
+	    	
+	    	<LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:gravity="center_horizontal">
+		        <Button
+		            android:id="@+id/login"
+		            android:layout_width="220px"
+		            android:layout_height="wrap_content"
+		             android:text="@string/login"/>
+		        <Button 
+		            android:id="@+id/register"
+		            android:layout_width="220px"
+		            android:layout_height="wrap_content"
+		            android:text="@string/register" />
+        	</LinearLayout>
+    	</TableLayout>
+        
+    </LinearLayout>
+
+
+</RelativeLayout>

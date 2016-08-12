@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/stock" >
+    
+	<LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:layout_marginTop="50dp"
+	    android:layout_gravity="center">
+	    <Button
+	        android:id="@+id/stock_inshop"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="商品入库"/>
+	    <Button
+	        android:id="@+id/stock_outshop"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="商品出库"/>
+	</LinearLayout>
+	
+	<RelativeLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center">
+	    <LinearLayout
+	        android:id="@+id/linear_in"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:layout_gravity="center"
+			android:visibility="gone">
+		    <Button
+		        android:id="@+id/add_stock_inshop"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:visibility="gone"
+			    android:text="添加入库"/>
+		    <Button
+		        android:id="@+id/delete_stock_inshop"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:visibility="gone"
+			    android:text="删除入库"/>
+		    <Button
+		        android:id="@+id/update_stock_inshop"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:visibility="gone"
+			    android:text="修改入库"/>
+		    <Button
+		        android:id="@+id/query_stock_inshop"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:visibility="gone"
+			    android:text="查询入库"/>
+		</LinearLayout>
+		
+	    <LinearLayout
+	        android:id="@+id/linear_out"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:layout_gravity="center"
+			android:visibility="gone">
+		    <Button
+		        android:id="@+id/add_stock_outshop"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:visibility="gone"
+			    android:text="添加出库"/>
+		    <Button
+		        android:id="@+id/delete_stock_outshop"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:visibility="gone"
+			    android:text="删除出库"/>
+		    <Button
+		        android:id="@+id/update_stock_outshop"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:visibility="gone"
+			    android:text="修改出库"/>
+		    <Button
+		        android:id="@+id/query_stock_outshop"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:visibility="gone"
+			    android:text="查询 出库"/>
+		</LinearLayout>
+	</RelativeLayout>
+    
+</LinearLayout>

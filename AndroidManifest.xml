@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.warehouse"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <application
+        android:name="helptool.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="activity.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="activity.AnythingActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="activity.QueryInformationActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="activity.AddOrUpdateShopInStockActivity"
+            android:label="商品入库--添加入库"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="activity.AddOrUpdateShopOutStockActivity"
+            android:label="商品出库--添加出库"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="activity.QueryShopInStockActivity"
+            android:label="商品入库--查询入库"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="activity.QueryShopOutStockActivity"
+            android:label="商品出库--查询出库"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="activity.AddOrUpdateCompanyInformationActivity"
+            android:label="供应商信息--添加供应商"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="activity.AddOrUpdateShopInformationActivity"
+            android:label="商品信息--添加商品"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="activity.AddOrUpdateCustomerInformationActivity"
+            android:label="客户信息--添加客户"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="activity.QueryShopInformationActivity"
+            android:label="商品信息--查询商品"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="activity.QueryCustomerInformationActivity"
+            android:label="客户信息--查询客户"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="activity.QueryCompanyInformationActivity"
+            android:label="供应商信息--查询供应商"
+            android:screenOrientation="landscape" >
+        </activity>
+       
+    </application>
+
+</manifest>
