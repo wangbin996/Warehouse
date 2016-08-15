@@ -16,16 +16,15 @@ public class ShopLab {
 	private String FILENAME = "shops.json";
 	
 	private ShopLab(Context context){
-		if(mShops == null){
-			mShops = new ArrayList<Shop>();
-		}
-		//sccJson = new SCCJson(context, FILENAME);
+		
+		sccJson = new SCCJson(context, FILENAME);
 		try {
-	//		mShops = sccJson.loadShops();
+			mShops = sccJson.loadShops();
 	//		Log.d("wangbin", "22222222");
 		} catch (Exception e) {
-	//		mShops = new ArrayList<Shop>();
-	//		Log.d("wangbin", "111111");
+			if(mShops == null){
+				mShops = new ArrayList<Shop>();
+			}
 		}
 	}
 
@@ -57,7 +56,6 @@ public class ShopLab {
 		int i=0,j=0;
 		for(i=0; i<mShops.size(); i++){
 			if(mShops.get(i).getId().equals(shop.getId())){
-		//		Log.d("wangbin", "一样就显示"+i);
 				j=i;
 			}
 		}
@@ -68,8 +66,16 @@ public class ShopLab {
 		try {
 			sccJson.saveShops(shops);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+	}
+	
+	public ArrayList<Shop> loadShops(){
+		try {
+			return sccJson.loadShops();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return mShops;
 		}
 	}
 	

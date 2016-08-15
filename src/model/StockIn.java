@@ -3,22 +3,54 @@ package model;
 import java.io.Serializable;
 import java.util.UUID;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.util.Log;
+
 public class StockIn implements Serializable{
 
-	private String shopName;
-	private String company;
-	private String amount;
-	private String danwei;
-	private String people;
-	private String phone;
-	private String pirceIn;
-	private String dateIn;
+	private String shopName="";
+	private String company="";
+	private String amount="";
+	private String danwei="";
+	private String people="";
+	private String phone="";
+	private String pirceIn="";
+	private String dateIn="";
 	private UUID mId;
 	
 	public StockIn(){
 		mId = UUID.randomUUID();
 	}
 
+	public StockIn(JSONObject json) throws JSONException{
+		mId = UUID.fromString(json.getString("id"));
+		shopName = json.getString("shopName");
+		company = json.getString("company");
+		amount = json.getString("amount");
+		danwei = json.getString("danwei");
+		people = json.getString("people");
+		phone = json.getString("phone");
+		pirceIn = json.getString("pirceIn");
+		dateIn = json.getString("dateIn");
+//		Log.d("wangbin", shopName+","+amount+"...");
+	}
+	
+	public JSONObject toJson() throws JSONException{
+		JSONObject json = new JSONObject();
+		json.put("id", mId.toString());
+		json.put("shopName", shopName);
+		json.put("company", company);
+		json.put("amount", amount);
+		json.put("danwei", danwei);
+		json.put("people", people);
+		json.put("phone", phone);
+		json.put("pirceIn", pirceIn);
+		json.put("dateIn", dateIn);
+		return json;
+	}
+	
 	public String getShopName() {
 		return shopName;
 	}

@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -135,6 +136,7 @@ public class QueryCustomerInformationActivity extends Activity {
 			TextView name = (TextView)view.findViewById(R.id.query_scc_information_list_name);
 			TextView danwei = (TextView)view.findViewById(R.id.query_scc_information_list_danwei);
 			name.setText("客户名称：" + customer.getCustomer());
+		//	Log.d("wangbin", customer.getCustomer()+"!");
 			if(customer.getShop().isEmpty()){
 				danwei.setText("欲购商品：" + "暂无");
 			}else {

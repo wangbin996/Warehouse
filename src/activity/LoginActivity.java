@@ -125,9 +125,9 @@ public class LoginActivity extends Activity {
 	protected boolean query_register(String account) {
 		SharedPreferences pref = getSharedPreferences(FILENAME, MODE_PRIVATE);
 		String account_query = pref.getString("account", "nothing");
-		Log.d("wangbin", account_query+",,"+account);
+	//	Log.d("wangbin", account_query+",,"+account);
 		if(account_query.equals(account)){
-			Log.d("wangbin", account_query+",,"+account);
+	//		Log.d("wangbin", account_query+",,"+account);
 			return true;
 		}
 		else{

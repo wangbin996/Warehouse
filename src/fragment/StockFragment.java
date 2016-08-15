@@ -26,6 +26,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -246,4 +247,10 @@ public class StockFragment extends Fragment {
 		}
 	};
     
+	@Override
+	public void onPause() {
+		super.onPause();
+		
+	}
+	
 }

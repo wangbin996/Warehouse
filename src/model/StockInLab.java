@@ -1,20 +1,31 @@
 package model;
 
 import helptool.SCCJson;
+import helptool.StockJson;
 
 import java.util.ArrayList;
 import java.util.UUID;
 
 import android.content.Context;
+import android.util.Log;
 
 public class StockInLab {
 
 	private ArrayList<StockIn> mStockIns;
 	private static StockInLab sStockIn;
+	private StockJson stockJson;
+	private String FILENAME = "stockins.json";
 	
 	private StockInLab(Context context){
-		if(mStockIns == null){
-			mStockIns = new ArrayList<StockIn>();
+		stockJson = new StockJson(context, FILENAME);
+		try {
+
+	//		Log.d("wangbin", "进入jiazai"+"555%%%%");
+			mStockIns = stockJson.loadStockIns();
+		} catch (Exception e) {
+			if(mStockIns == null){
+				mStockIns = new ArrayList<StockIn>();
+			}
 		}
 	}
 
@@ -51,6 +62,24 @@ public class StockInLab {
 			}
 		}
 		mStockIns.remove(j);
+	}
+	
+	public void saveStockIns(ArrayList<StockIn> stockIns){
+		try {
+		//	Log.d("wangbin", "进入调用方法"+stockIns.size()+"..");
+			stockJson.saveStockIns(stockIns);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public ArrayList<StockIn> loadStockIns(){
+		try {
+			return stockJson.loadStockIns();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return mStockIns;
+		}
 	}
 	
 }

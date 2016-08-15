@@ -3,20 +3,38 @@ package model;
 import java.io.Serializable;
 import java.util.UUID;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.util.Log;
+
 public class Customer implements Serializable{
 
-	private String customer;
-	private String city;
-	private String address;
-	private String chuangzhen;
-	private String phone;
-	private String youbain;
-	private String shop;
-	private String gongsi;
+	private String customer="";
+	private String city="";
+	private String address="";
+	private String chuangzhen="";
+	private String phone="";
+	private String youbain="";
+	private String shop="";
+	private String gongsi="";
 	private UUID mId;
 	
 	public Customer(){
 		mId = UUID.randomUUID();
+	}
+	
+	public Customer(JSONObject json) throws JSONException{
+		mId = UUID.fromString(json.getString("id"));
+		customer = json.getString("customer");
+		city = json.getString("city");
+		address = json.getString("address");
+		chuangzhen = json.getString("chuangzhen");
+		phone = json.getString("phone");
+		youbain = json.getString("youbain");
+		shop = json.getString("shop");
+		gongsi = json.getString("gongsi");
+	//	Log.d("wangbin", customer+","+shop+","+gongsi);
 	}
 	
 	public UUID getId(){
@@ -85,6 +103,20 @@ public class Customer implements Serializable{
 
 	public void setGongsi(String gongsi) {
 		this.gongsi = gongsi;
+	}
+
+	public JSONObject toJson() throws JSONException{
+		JSONObject json = new JSONObject();
+		json.put("id", mId.toString());
+		json.put("customer", customer);
+		json.put("city", city);
+		json.put("address", address);
+		json.put("chuangzhen", chuangzhen);
+		json.put("phone", phone);
+		json.put("youbain", youbain);
+		json.put("shop", shop);
+		json.put("gongsi", gongsi);
+		return json;
 	}
 	
 }

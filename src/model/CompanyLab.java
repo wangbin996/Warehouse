@@ -1,5 +1,7 @@
 package model;
 
+import helptool.SCCJson;
+
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -9,10 +11,17 @@ public class CompanyLab {
 
 	private ArrayList<Company> mCompanys;
 	private static CompanyLab sCompany;
+	private SCCJson sccJson;
+	private String FILENAME = "companys.json";
 	
 	private CompanyLab(Context context){
-		if(mCompanys == null){
-			mCompanys = new ArrayList<Company>();
+		sccJson = new SCCJson(context, FILENAME);
+		try {
+			mCompanys = sccJson.loadCompanys();
+		} catch (Exception e) {
+			if(mCompanys == null){
+				mCompanys = new ArrayList<Company>();
+			}
 		}
 	}
 
@@ -49,6 +58,23 @@ public class CompanyLab {
 			}
 		}
 		mCompanys.remove(j);
+	}
+	
+	public void saveCompanys(ArrayList<Company> companys){
+		try {
+			sccJson.saveCompanys(companys);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public ArrayList<Company> loadCompanys(){
+		try {
+			return sccJson.loadCompanys();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return mCompanys;
+		}
 	}
 	
 }
