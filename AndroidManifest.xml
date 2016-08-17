@@ -34,12 +34,12 @@
         </activity>
         <activity
             android:name="activity.AddOrUpdateShopInStockActivity"
-            android:label="商品入库--添加入库"
+            android:label="商品入库--添加或修改入库"
             android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="activity.AddOrUpdateShopOutStockActivity"
-            android:label="商品出库--添加出库"
+            android:label="商品出库--添加或修改出库"
             android:screenOrientation="landscape" >
         </activity>
         <activity
@@ -54,17 +54,17 @@
         </activity>
         <activity
             android:name="activity.AddOrUpdateCompanyInformationActivity"
-            android:label="供应商信息--添加供应商"
+            android:label="供应商信息--添加或修改供应商"
             android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="activity.AddOrUpdateShopInformationActivity"
-            android:label="商品信息--添加商品"
+            android:label="商品信息--添加或修改商品"
             android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="activity.AddOrUpdateCustomerInformationActivity"
-            android:label="客户信息--添加客户"
+            android:label="客户信息--添加或修改客户"
             android:screenOrientation="landscape" >
         </activity>
         <activity

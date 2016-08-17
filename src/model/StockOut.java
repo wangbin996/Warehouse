@@ -25,20 +25,20 @@ public class StockOut implements Serializable{
 	}
 	
 	public StockOut(JSONObject json) throws JSONException{
-		Log.d("wangbin", "第几次进入。。。");
+	//	Log.d("wangbin", "第几次进入。。。");
 		mId = UUID.fromString(json.getString("id"));
-		Log.d("wangbin", "第几次进入。。。1");
+	//	Log.d("wangbin", "第几次进入。。。1");
 		shopName = json.getString("shopName");
-		Log.d("wangbin", "第几次进入。。。2"+shopName);
+	//	Log.d("wangbin", "第几次进入。。。2"+shopName);
 		customer = json.getString("customer");
-		Log.d("wangbin", "第几次进入。。。2"+customer);
+	//	Log.d("wangbin", "第几次进入。。。2"+customer);
 		amount = json.getString("amount");
 		danwei = json.getString("danwei");
 		phone = json.getString("phone");
 		people = json.getString("people");
 		pirceOut = json.getString("pirceOut");
 		dateOut = json.getString("dateOut");
-		Log.d("wangbin", shopName+","+customer+",");
+	//	Log.d("wangbin", shopName+","+customer+",");
 	}
 	
 	public JSONObject toJson() throws JSONException{
@@ -52,7 +52,7 @@ public class StockOut implements Serializable{
 		json.put("people", people);
 		json.put("pirceOut", pirceOut);
 		json.put("dateOut", dateOut);
-		Log.d("wangbin", "tojson");
+	//	Log.d("wangbin", "tojson");
 		return json;
 	}
 

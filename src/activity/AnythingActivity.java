@@ -59,6 +59,8 @@ public class AnythingActivity extends FragmentActivity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.anything_activity);
 		
+		Log.d("wangbin", "create");
+		
 		anythingActivity = this;
 		
 		informationButton = (Button)findViewById(R.id.information);
@@ -199,6 +201,8 @@ public class AnythingActivity extends FragmentActivity {
     @Override
     protected void onStart() {
     	super.onStart();
+
+		Log.d("wangbin", "start"+flag);
     	mButtons.get(4).setBackgroundResource(R.drawable.no);
 		mButtons.get(1).setBackgroundResource(R.drawable.no);
 		mButtons.get(2).setBackgroundResource(R.drawable.no);
@@ -206,7 +210,9 @@ public class AnythingActivity extends FragmentActivity {
 		mButtons.get(0).setBackgroundResource(R.drawable.no);
 		switch (flag) {
 		case 0:
+			Log.d("wangbin", "start"+"dgdgd");
 			mButtons.get(0).setBackgroundResource(R.drawable.yes);
+			Log.d("wangbin", "start"+"sdggfshe");
 			break;
 		case 1:
 			mButtons.get(1).setBackgroundResource(R.drawable.yes);
@@ -229,6 +235,7 @@ public class AnythingActivity extends FragmentActivity {
     @Override
     protected void onPause() {
     	super.onPause();
+		Log.d("wangbin", "pause");
     	//---------------------------------------------------------------------------------------
 		ArrayList<Shop> shops = ShopLab.get(AnythingActivity.this).getShops();
 		ShopLab.get(AnythingActivity.this).saveShops(shops);
@@ -244,5 +251,17 @@ public class AnythingActivity extends FragmentActivity {
 		
 		ArrayList<StockOut> stockOuts = StockOutLab.get(AnythingActivity.this).getStockOuts();
 		StockOutLab.get(AnythingActivity.this).saveStockOuts(stockOuts);
+    }
+
+    @Override
+    protected void onStop() {
+    	super.onStop();
+		Log.d("wangbin", "stop");
+    }
+    
+    @Override
+    protected void onResume() {
+    	super.onResume();
+		Log.d("wangbin", "resume");
     }
 }

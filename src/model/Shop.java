@@ -19,13 +19,13 @@ public class Shop implements Serializable{
 	}
 	
 	public Shop(JSONObject json) throws JSONException{
-		Log.d("wangbing", "json"+"!");
+	//	Log.d("wangbing", "json"+"!");
 		mId = UUID.fromString(json.getString("id"));
-		Log.d("wangbing", "json"+",id");
+	//	Log.d("wangbing", "json"+",id");
 		shopName = json.getString("shopName");
-		Log.d("wangbing", "json"+","+shopName);
+	//	Log.d("wangbing", "json"+","+shopName);
 		danwei = json.getString("danwei");
-		Log.d("wangbing", "json"+","+danwei);
+	//	Log.d("wangbing", "json"+","+danwei);
 	}
 
 	public UUID getId(){

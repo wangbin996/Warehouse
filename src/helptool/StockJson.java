@@ -87,10 +87,10 @@ public class StockJson {
 				OutputStream out = context.openFileOutput(filename, Context.MODE_PRIVATE);
 				writer = new OutputStreamWriter(out);
 				writer.write(array.toString());
-				Log.d("wangbin", "进入调用方法"+array.toString()+"\n存储成功");
+		//		Log.d("wangbin", "进入调用方法"+array.toString()+"\n存储成功");
 			} catch (Exception e) {
 				e.printStackTrace();
-				Log.d("wangbin", "存储出库，抛出异常");
+	//			Log.d("wangbin", "存储出库，抛出异常");
 			}finally{
 				if(writer!= null){
 					writer.close();
@@ -107,15 +107,16 @@ public class StockJson {
 				while((line1 = reader1.readLine()) != null){
 					builder1.append(line1);
 				}
-				Log.d("wangbin", "现在开始解析"+builder1.toString()+"!!!!");
+		//		Log.d("wangbin", "现在开始解析"+builder1.toString()+"!!!!");
 				JSONArray array1 = (JSONArray) new JSONTokener(builder1.toString()).nextValue();
 				for (int i = 0; i < array1.length(); i++) {
-					Log.d("wangbin", "第几次进入");
+		//			Log.d("wangbin", "第几次进入");
 					stockOuts1.add(new StockOut(array.getJSONObject(i)));
 				}
-				Log.d("wangbin", "现在开始解析"+stockOuts1.size()+"@@");
+		//		Log.d("wangbin", "现在开始解析"+stockOuts1.size()+"@@");
 			} catch (Exception e) {
-				Log.d("wangbin", "读取抛出异常");
+				e.printStackTrace();
+	//			Log.d("wangbin", "读取抛出异常");
 			}finally{
 				if(reader1 != null){
 					reader1.close();
@@ -142,7 +143,7 @@ public class StockJson {
 					stockOuts.add(new StockOut(array.getJSONObject(i)));
 				}
 			} catch (Exception e) {
-				// TODO: handle exception
+				e.printStackTrace();
 			}finally{
 				if(reader != null){
 					reader.close();

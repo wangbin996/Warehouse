@@ -63,12 +63,13 @@ public class SCCJson {
 				builder1.append(line1);
 			}
 			JSONArray array1 = (JSONArray)new JSONTokener(builder1.toString()).nextValue();
-			Log.d("wangbing", "!!!!!"+builder1.toString());
+	//		Log.d("wangbing", "!!!!!"+builder1.toString());
 			for(int i=0; i<array1.length(); i++){
 				shops1.add(new Shop(array1.getJSONObject(i)));
 			}
 		} catch (Exception e) {
-			Log.d("wangbing", "读取shop抛出异常");
+			e.printStackTrace();
+		//	Log.d("wangbing", "读取shop抛出异常");
 		}finally{
 			if(reader1!=null){
 				reader1.close();

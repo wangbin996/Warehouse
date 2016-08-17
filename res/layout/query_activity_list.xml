@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/delete_query_scc"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    
+    	<TextView
+    	    android:id="@+id/shuxing"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentRight="true"
+    	    android:layout_centerVertical="true"
+    	    android:text="FDHEUER"
+    	    android:textSize="18dp" />
+    	
+   		<TextView
+	        android:id="@+id/query_activity_list_name"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+    		android:layout_toLeftOf="@id/shuxing"
+	        android:text="$#%@#^$#"
+	        android:textSize="18dp"/>
+   		
+   		<TextView
+	        android:id="@+id/query_activity_list_danwei"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+    		android:layout_below="@id/query_activity_list_name"
+    		android:layout_toLeftOf="@id/shuxing"
+	        android:text="SDSRHSEHD"
+	        android:textSize="18dp"/>
+    
+
+	</RelativeLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/yes"/>
+
+</LinearLayout>
